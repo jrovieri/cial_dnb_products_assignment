@@ -108,7 +108,7 @@ class CialDnbTestSpider(CrawlSpider):
                 logo_url = response.xpath(
                     LOGO_XPATH_TMPL % (attr, word)).extract_first()
 
-                if validators.url(logo_url):
+                if logo_url and validators.url(logo_url):
                     return logo_url
 
         return ''
@@ -133,6 +133,7 @@ if __name__ == '__main__':
     with sys.stdin as f:
         start_urls = set([url.strip() for url in f.readlines()])
 
+    print(start_urls)
     process = CrawlerProcess(settings=SETTINGS)
     process.crawl(CialDnbTestSpider, start_urls=start_urls)
     process.start()
