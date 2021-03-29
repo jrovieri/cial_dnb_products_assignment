@@ -10,4 +10,4 @@ RUN sed -n '/pkg-resources==0.0.0/!p' requirements.txt > temp && mv temp require
 
 RUN pip install -r ./requirements.txt
 
-ENTRYPOINT [ "python", "main.py" ]
+ENTRYPOINT [ "python", "main.py"]

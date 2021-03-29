@@ -133,7 +133,6 @@ if __name__ == '__main__':
     with sys.stdin as f:
         start_urls = set([url.strip() for url in f.readlines()])
 
-    print(start_urls)
     process = CrawlerProcess(settings=SETTINGS)
     process.crawl(CialDnbTestSpider, start_urls=start_urls)
     process.start()

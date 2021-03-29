@@ -2,13 +2,7 @@
 The crawler was developed using Scrapy Framework and deployed in a Docker container.
 
 # Instructions
-Clone the repository.
+No need to clone this repository. The docker image is published on DockerHub.
 ```bash
-  git clone https://github.com/jrovieri/cial_dnb_products_assignment.git
-```
-
-Enter into the cloned repository and build the docker image
-```bash
-  cd cial_dnb_products_assignment
-  docker bui
+  cat websites.txt | docker run -i jrovieri/cial_dnb_products_assignment
 ```
